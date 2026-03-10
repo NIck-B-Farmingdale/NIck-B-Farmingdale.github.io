@@ -1,1 +1,178 @@
-d
+<!--  Tells the web browser to expect modern HTML5 code-->
+<!DOCTYPE html> 
+
+<!--  Starts the document and sets the language to English-->
+<html lang="en"> 
+
+<!--  The <head> contains behind-the-scenes data. Nothing here is visible on the actual page-->
+<head>
+   
+    <!--  Sets character encoding so symbols and text display correctly-->
+    <meta charset="UTF-8">
+    
+    <!--  Crucial for mobile-first design. Tells the browser to scale the site to the device screen-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--  The text that appears on the actual browser tab-->
+    <title>Nicholas Brennan | Portfolio</title>
+    
+    <!--  Reaches out to Google's servers to load the Montserrat and Open Sans fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!--  Links this HTML skeleton to the CSS stylesheet to apply dark-mode colors-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<!--  The <body> contains everything that the user will actually see and interact with-->
+<body>
+
+    <!--  <header> is a semantic tag for the top section. The class "top-bar" links to the CSS stylesheet-->
+    <header class="top-bar">
+       
+        <!-- my initials text logo-->
+        <div class="logo">NB.</div>
+        
+        <!-- <nav> wraps around the navigation links-->
+        <nav>
+            <!--  href="#home" acts as an anchor link, jumping the user down to the section with id="home" -->
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            
+            <!--  target="_blank" forces my resume to open in a brand-new browser tab -->
+            <a href="Nicholas Brennan - Resume 2026.pdf" target="_blank" class="resume-btn">Resume</a> 
+
+        </nav>
+    </header>
+
+    <!-- <main> holds the core content of the webpage-->
+    <main>
+        
+        <!-- <section> divides the page. id="home" is the target for the "Home" link in the nav bar-->
+        <section id="home" class="hero">
+            <div class="hero-content">
+
+            <!-- the text half of the hero section-->
+                <div class="hero-text">
+                    <!-- <h1> is the largest heading, used for the main title -->
+                    <h1>Hi, I'm Nicholas Brennan.</h1>
+                    <!-- <p> stands for paragraph, used for standard body text -->
+                    <p>Customer-focused IT professional currently finishing a BS in Computer Programming and Information Systems. Utilizes over 3 years of experience working in roles which prioritize customer service and conflict resolution to provide simplified, efficient technical support.</p>
+                </div>
+
+                <!-- The Image half of the hero section-->
+                 <div class="hero-image">
+                    <!--src="headshot.jpg" tells the browser to look for an image in the folder with that name -->
+                    <img src="headshot.jpg" alt="Nicholas Brennan">
+                 </div>
+            
+            </div>
+        </section>
+
+        <!-- The About section, targetable by the "About" link -->
+        <section id="about">
+            <h2>More About Me</h2>
+            
+            <!-- A <div> is just a generic container box used to group things together for styling -->
+            <div class="accordion">
+                
+                <!-- <details> is a native HTML tag that creates a clickable, expand/collapse widget -->
+                <details>
+                    <!-- <summary> is the visible heading of the accordion that the user clicks -->
+                    <summary>My Background</summary>
+                    <!-- This div holds the text that is hidden until the user clicks the summary -->
+                    <div class="accordion-content">
+                        <p>With an Applied Associate of Science in IT and hands-on experience in dynamic customer-facing roles, I specialize in bridging the gap between technical troubleshooting and user experience.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Career Goals</summary>
+                    <div class="accordion-content">
+                        <p>My goal is to step into a system administrator position where I can utilize my skills in Linux, Windows Server, and Active Directory to build and maintain robust network environments.</p>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- The Projects section, can be reached by clicking the "projects" link in the nav bar-->
+         <section id="projects">
+            <h2>My Projects</h2>
+
+            <!--This container will hold all of my project cards in a grid-->
+            <div class="projects-grid">
+                <!-- Project card 1 (taxi program)-->
+                <div class="project-card">
+                    <!--Screenshot of taxi software goes here-->
+                    <img src="firebase-project.jpg" alt="Firebase Driver Screen">
+                
+                    <!-- Text Area for the project-->
+                    <div class="project-info">
+                        <h3>Transport Company Program</h3>
+                        <p>A software engineering sprint project which allows a user to create an account via firebase, track miles and extra costs, submit trip logs for approval, and much more.</p>
+                        <!-- A styled button which will take a user to the project's github page-->
+                         <a href="https://github.com/ShaneW12/Group6.1" target="_blank" class="project_btn">View on Github</a>
+
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="portfolio-site.jpg" alt="Portfolio Website Screenshot">
+                    
+                    <!-- Text Area for Project 2-->
+                     <div class="project-info">
+                        <h3>Professional Portfolio</h3>
+                        <p>A responsive, minimalist dark-mode style portfolio built from scratch with html and css to help showcase my technical skills as well as tell people a bit more about my interests.</p>
+                        <a href="https://github.com/NIck-B-Farmingdale/NIck-B-Farmingdale.github.io" target="_blank" class="project_btn">View on Github</a>
+                     </div>
+                </div>
+
+                <!-- start of project 3-->
+                 <div class="project-card">
+                    <img src="hardware-database.jpg" alt="Hardware store database screenshot">
+
+                    <!-- Text area for project 3-->
+                     <div class="project-info">
+                        <h3>Hardware store AI POS system analysis project</h3>
+                        <p>In this project, I along with two others mapped out a hypothetical AI-based system which would allow a retail hardware store to use ai to more actively address business analytics.</p>
+                     </div>
+                 </div>
+
+            </div>
+            
+
+             
+         </section>
+
+    </main>
+
+    <!-- The script tag tells the browser that this is javascript code and NOT html -->
+     <script>
+        //Grabs the navigation bar so I can control it
+        const navbar = document.querySelector(".top-bar");
+        //creates a memory of where the scrollbar is currently sitting
+        let lastScrollY = window.scrollY;
+        //adds an event listener for any time the user scrols the page
+        window.addEventListener("scroll", () => {
+
+            //if the current scroll position is greater than the last one, they are scrolling DOWN
+            if (lastScrollY < window.scrollY) {
+                //adds the hidden class to slide the bar back down
+                navbar.classList.add("top-bar--hidden");
+            }
+            //if not, they must be scrolling up
+            else {
+                //Removes the hidden class to slide the bar back down
+                navbar.classList.remove("top-bar--hidden");
+            }
+
+            //updates the memory with the new scroll position for the next time they scroll
+            lastScrollY = window.scrollY;
+        });
+     </script>
+
+</body>
+</html>
