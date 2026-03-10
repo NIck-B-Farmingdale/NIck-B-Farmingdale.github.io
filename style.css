@@ -1,11 +1,11 @@
 /* :root creates a global scope for variables. This works just like declaring variables in a programming script. */
 /* If I ever want to change a color later, I will only have to change it here, not on every single line. */
 :root {
-    --bg-color: #121212;         
+    --bg-color: #322222;         
     --surface-color: #1e1e1e;    
-    --text-main: #f5f5f5;        
-    --text-muted: #b3b3b3;       
-    --accent-color: #4da6ff;     
+    --text-main: #0f55fb;        
+    --text-muted: #c5bdbd;       
+    --accent-color: #f99717;     
     --border-color: #333333;     
 }
 
@@ -337,6 +337,8 @@ summary::-webkit-details-marker {
     /*On hover, changes the border and text color to my accent blue */
     border-color: var(--accent-color);
     color: var(--accent-color);
+    /*Makes the pill slide up*/
+    transform: translateY(-3px);
     /*Increases the shadow even more to make it look like it's lifting off of the page*/
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
