@@ -166,7 +166,7 @@ summary {
     align-items: center;
 }
 
-/* ::after is a pseudo-element. It lets me inject visual content via CSS instead of HTML. */
+/* ::after is a "pseudo-element". It lets me inject visual content using CSS instead of HTML. */
 /* this injects a plus sign (+) to the far right of the summary bar. */
 summary::after {
     content: '+';
@@ -174,7 +174,7 @@ summary::after {
     color: var(--accent-color);
 }
 
-/* When the <details> tag is clicked open, change the plus sign to a minus sign (−) */
+/* When the <details> tag is clicked open, changes the plus sign to a minus sign (−) */
 details[open] summary::after {
     content: '−';
 }
@@ -221,7 +221,7 @@ summary::-webkit-details-marker {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* --- Projects Section --- */
+/* --- Projects section --- */
 .projects-grid {
     /* switched from grid to flex layout to making centering odd cards easy*/
     display: flex;
@@ -278,7 +278,7 @@ summary::-webkit-details-marker {
     font-size: 0.95rem;
 }
 
-/* --- Project Button Styling --- */
+/* --- Project button styling --- */
 .project_btn {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -296,6 +296,51 @@ summary::-webkit-details-marker {
     background-color: var(--accent-color);
     color: var(--bg-color);
 }
+
+/*---Skills section styling---*/
+.skills-container {
+    /*uses flex to achieve similar spacing and balance style to the project cards*/
+    display: flex;
+    /*Allows pills to wrap to the next line */
+    flex-wrap: wrap;
+    /*Centers all pills on the line in a satisfyiong way*/
+    justify-content: center;
+    /*Adds a bit of extra space between the pills*/
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skill-pill {
+    /*Sets the background to a slightly lighter dark grey so that the buttons pop off the page a little more*/
+    background-color: #252525;
+    color: var(--text-main);
+    /*Uses my body font for clean, consistent readability*/
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 0.95rem;
+
+    /*Padding creates space around the text*/
+    padding: 0.75rem 1.5rem;
+    /* A large border-radius will create that rounded "pill" shape*/
+    border-radius: 50px;
+    /*This slightly darker border will help define the edges*/
+    border: 1px solid var(--border-color);
+    /*Adds a soft shadow for some more depth*/
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    /*Smooth transition for the hover effect found below*/
+    transition: all 0.3s ease;
+    /*Makes the pill behave like a block so padding and margins work while also having them sit inline*/
+    display: inline-block;
+}
+/*---Hover effect---*/
+.skill-pill:hover {
+    /*On hover, changes the border and text color to my accent blue */
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    /*Increases the shadow even more to make it look like it's lifting off of the page*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
 
 /* --- Desktop Breakpoint (Media Query) --- */
 /* This helps responsiveness */
