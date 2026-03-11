@@ -22,3 +22,12 @@ DEVELOPMENT TIMELINE:
 
 4. spruced up my skills section a bit with a hover effect and color changes.
 
+3/10/26:
+1. Added my full hobbies section by putting my top 5 of games, music, and movies. I did this by either putting them each on a track system(mobile) or having a full 5 column layout for each interest (desktop) i used a card system similar to the project cards, but with much more emphasis on the image portion.
+
+
+seperate areas, make fonts more readable
+
+zoom out picture
+
+Add footer

@@ -1,5 +1,5 @@
-/* :root creates a global scope for variables. This works just like declaring variables in a programming script. */
-/* If I ever want to change a color later, I will only have to change it here, not on every single line. */
+/*:root creates a global scope for variables. This works just like declaring variables in a programming script. */
+/*If I ever want to change a color later, I will only have to change it here, not on every single line. */
 :root {
     --bg-color: #322222;         
     --surface-color: #1e1e1e;    
@@ -9,65 +9,65 @@
     --border-color: #333333;     
 }
 
-/* The asterisk (*) is a wildcard selector that targets EVERY element on the page. */
+/*The asterisk (*) is a wildcard selector that targets EVERY element on the page. */
 * {
-    /* Browsers add default spacing. This removes it so I can start with a clean slate. */
+    /*Browsers add default spacing. This removes it so I can start with a clean slate. */
     margin: 0;
     padding: 0;
-    /* Forces padding and borders to be included in an element's total width and height, preventing layout math errors. */
+    /*Forces padding and borders to be included in an element's total width and height, preventing layout math errors. */
     box-sizing: border-box;
 }
 
-/* Targets the main body of the page */
+/*Targets the main body of the page */
 body {
-    /* Applies the dark background color variable I created above */
+    /*Applies the dark background color variable I created above */
     background-color: var(--bg-color);
-    /* Applies the white text color variable */
+    /*Applies the white text color variable */
     color: var(--text-main);
-    /* Sets the default body font to Open Sans. If it fails to load, it falls back to the system's default sans-serif font. */
+    /*Sets the default body font to Open Sans. If it fails to load, it falls back to the system's default sans-serif font. */
     font-family: 'Open Sans', sans-serif;
-    /* Spaces out the lines of text slightly for better readability */
+    /*Spaces out the lines of text slightly for better readability */
     line-height: 1.6;
     font-size: 16px;
 }
 
-/* Targets all headings, the accordion summaries, and the navigation links to apply the thicker Montserrat font */
+/*Targets all headings, the accordion summaries, and the nav links to apply the thicker Montserrat font */
 h1, h2, h3, summary, .logo, nav a {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* --- Navigation Bar --- */
-/* Targets the header element that has the class "top-bar" */
+/*--- Navigation Bar --- */
+/*Targets the header element that has the class "top-bar" */
 .top-bar {
     background-color: var(--surface-color);
-    /* Adds spacing inside the box (1rem is usually 16 pixels) */
+    /*Adds spacing inside the box (1rem is usually 16 pixels) */
     padding: 1rem;
     
-    /* Flexbox is a layout tool that makes it easy to align items in rows or columns */
+    /*Flexbox is a layout tool that makes it easy to align items in rows or columns */
     display: flex;
-    /* Stacks the logo and links vertically (mobile-first design) */
+    /*Stacks the logo and links vertically (mobile-first design) */
     flex-direction: column; 
-    /* Centers the stacked items horizontally */
+    /*Centers the stacked items horizontally */
     align-items: center;
-    /* Adds a subtle line under the navigation bar */
+    /*Adds a subtle line under the navigation bar */
     border-bottom: 1px solid var(--border-color);
     
-    /* "Sticky" keeps the navigation bar pinned to the top of the screen as the user scrolls down */
+    /*"Sticky" keeps the navigation bar pinned to the top of the screen as the user scrolls down */
     position: sticky; 
     top: 0;
     z-index: 100; /* Ensures the nav bar stays visually on top of all other scrolling content */
 
-    /* This line creates a smooth 0.3 second slide animation */
+    /*This line creates a smooth 0.3 second slide animation */
     transition: transform 0.3s ease-in-out;
 }
 
-/* this block makes it so Javascript can apply this class to hide the bar*/
+/*this block makes it so Javascript can apply this class to hide the bar*/
 .top-bar--hidden {
     /*This will move the entire bar 100% of it's own height upwards, pulling it off screen*/
     transform: translateY(-100%);
 }
 
-/* Targets the <div> with class="logo" */
+/*Targets the <div> with class="logo" */
 .logo {
     /* 1.5rem means 1.5 times the base font size (so roughly 24px) */
     font-size: 1.5rem;
@@ -77,59 +77,59 @@ h1, h2, h3, summary, .logo, nav a {
     margin-bottom: 0.5rem;
 }
 
-/* Targets the <nav> container */
+/*Targets the <nav> container */
 nav {
     display: flex;
-    /* Adds a 1rem gap between each of the navigation links */
+    /*Adds a 1rem gap between each of the navigation links */
     gap: 1rem;
-    /* If the screen is too narrow, this allows the links to wrap to a new line instead of breaking the layout */
+    /*If the screen is too narrow, this allows the links to wrap to a new line instead of breaking the layout */
     flex-wrap: wrap;
     justify-content: center;
 }
 
-/* Targets the anchor <a> tags INSIDE the <nav> container */
+/*Targets the anchor <a> tags INSIDE the <nav> container */
 nav a {
     color: var(--text-main);
-    /* Removes the default underline that browsers put on links */
+    /*Removes the default underline that browsers put on links */
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
-    /* Creates a smooth, 0.3-second fade animation when the color changes */
+    /*Creates a smooth, 0.3-second fade animation when the color changes */
     transition: color 0.3s ease;
 }
 
-/* The :hover state applies ONLY when the user's mouse is over the link */
+/*The :hover state applies ONLY when the user's mouse is over the link */
 nav a:hover {
     color: var(--accent-color);
 }
 
-/* Targets the resume link specifically to make it blue by default */
+/*Targets the resume link specifically to make it blue by default */
 .resume-btn {
     color: var(--accent-color);
 }
 
-/* --- Main Layout --- */
+/*--- Main Layout --- */
 main {
-    /* Adds 2rem spacing on top/bottom, and 1rem spacing on left/right */
+    /*Adds 2rem spacing on top/bottom, and 1rem spacing on left/right */
     padding: 2rem 1rem;
-    /* Prevents the text from stretching too far across wide desktop monitors */
+    /*Prevents the text from stretching too far across wide desktop monitors */
     max-width: 800px;
-    /* The "auto" on the left and right margins perfectly centers the container on the screen */
+    /*The "auto" on the left and right margins perfectly centers the container on the screen */
     margin: 0 auto; 
 }
 
-/* Adds space below every single <section> tag */
+/*Adds space below every single <section> tag */
 section {
     margin-bottom: 3rem;
 }
 
-/* Targets the <h1> inside the section with class="hero" */
+/*Targets the <h1> inside the section with class="hero" */
 .hero h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
-/* Targets the <p> inside the section with class="hero" */
+/*Targets the <p> inside the section with class="hero" */
 .hero p {
     color: var(--text-muted);
     font-size: 1.1rem;
@@ -142,8 +142,8 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
-/* --- Accordion Styles --- */
-/* Targets the <details> wrapper */
+/*--- Accordion Styles --- */
+/*Targets the <details> wrapper */
 details {
     background-color: var(--surface-color);
     border: 1px solid var(--border-color);
@@ -151,40 +151,40 @@ details {
     margin-bottom: 1rem;
 }
 
-/* Targets the clickable header of the accordion */
+/*Targets the clickable header of the accordion */
 summary {
     padding: 1rem;
     font-weight: 600;
-    /* Changes the mouse cursor to a pointing hand to show it's clickable */
+    /*Changes the mouse cursor to a pointing hand to show it's clickable */
     cursor: pointer;
-    /* Removes the ugly default black triangle the browser puts next to the summary */
+    /*Removes the ugly default black triangle the browser puts next to the summary */
     list-style: none; 
     
     display: flex;
-    /* Pushes the text to the far left and my custom icon to the far right */
+    /*Pushes the text to the far left and my custom icon to the far right */
     justify-content: space-between; 
     align-items: center;
 }
 
-/* ::after is a "pseudo-element". It lets me inject visual content using CSS instead of HTML. */
-/* this injects a plus sign (+) to the far right of the summary bar. */
+/*::after is a "pseudo-element". It lets me inject visual content using CSS instead of HTML. */
+/*this injects a plus sign (+) to the far right of the summary bar. */
 summary::after {
     content: '+';
     font-size: 1.2rem;
     color: var(--accent-color);
 }
 
-/* When the <details> tag is clicked open, changes the plus sign to a minus sign (−) */
+/*When the <details> tag is clicked open, changes the plus sign to a minus sign (−) */
 details[open] summary::after {
     content: '−';
 }
 
-/* A specific fix to remove the default triangle in Apple's Safari browser */
+/*A specific fix to remove the default triangle in Apple's Safari browser */
 summary::-webkit-details-marker {
     display: none; 
 }
 
-/* Targets the hidden text box */
+/*Targets the hidden text box */
 .accordion-content {
     padding: 0 1rem 1rem 1rem;
     color: var(--text-muted);
@@ -194,7 +194,7 @@ summary::-webkit-details-marker {
 }
 
 .hero-content {
-        /* On mobile, stack them: Image on top, text on bottom */
+        /*On mobile, stack them: Image on top, text on bottom */
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
@@ -203,33 +203,33 @@ summary::-webkit-details-marker {
 }
 .hero-image img {
     
-    /* ---THIS IS CRUCIAL FOR SIZING --- */
-    /* these two lines will force the image to be a fixed 150px square */
+    /*---THIS IS CRUCIAL FOR SIZING --- */
+    /*these two lines will force the image to be a fixed 150px square */
     width: 150px;
     height: 150px;
 
     /*Makes the corner 50% rounded, turning the square into a perfect circle */
     border-radius: 50%;
 
-    /* "cover" makes it so the image fills the circle without any squishing or stretching */
+    /*"cover" makes it so the image fills the circle without any squishing or stretching */
     object-fit: cover;
 
-    /* Adds a colored border using the blue accent color variable */
+    /*Adds a colored border using the blue accent color variable */
     border: 3px solid var(--accent-color);
 
-    /* Adds a slight shadow to make it pop off the dark background */
+    /*Adds a slight shadow to make it pop off the dark background */
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* --- Projects section --- */
 .projects-grid {
-    /* switched from grid to flex layout to making centering odd cards easy*/
+    /*switched from grid to flex layout to making centering odd cards easy*/
     display: flex;
-    /* allows the cards to wrap to a new line when they run out of room*/
+    /*allows the cards to wrap to a new line when they run out of room*/
     flex-wrap: wrap;
-    /* this line will center any leftover cards on the bottom*/
+    /*this line will center any leftover cards on the bottom*/
     justify-content: center; 
-    /* Adds consistent spacing between the cards */
+    /*Adds consistent spacing between the cards */
     gap: 2rem;
     margin-top: 1.5rem;
 }
@@ -238,10 +238,10 @@ summary::-webkit-details-marker {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     
-    /* this hides the sharp corners of the image from spilling over the card's rounded corners */
+    /*this hides the sharp corners of the image from spilling over the card's rounded corners */
     overflow: hidden; 
     
-    /* Adds a 0.3-second animation for the hover effect below */
+    /*Adds a 0.3-second animation for the hover effect below */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     /*on mobile, forces the card to take up 100% of the screen width*/
@@ -255,9 +255,9 @@ summary::-webkit-details-marker {
 }
 
 .project-card img {
-    /* Forces the image to stretch across the entire top of the card */
+    /*Forces the image to stretch across the entire top of the card */
     width: 100%;
-    /* Locks the image height so that all cards will look identical, regardless of original photo size */
+    /*Locks the image height so that all cards will look identical, regardless of original photo size */
     height: 200px;
     object-fit: cover;
     border-bottom: 1px solid var(--border-color);
@@ -291,7 +291,7 @@ summary::-webkit-details-marker {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Inverts the button colors when hovered */
+/*Inverts the button colors when hovered */
 .project_btn:hover {
     background-color: var(--accent-color);
     color: var(--bg-color);
@@ -343,50 +343,126 @@ summary::-webkit-details-marker {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
+/*Visual hobbies layout*/
+.hobby-category {
+    margin-bottom: 2.5rem;
+}
 
-/* --- Desktop Breakpoint (Media Query) --- */
-/* This helps responsiveness */
-/* The rules inside these brackets ONLY apply if the screen is 768px wide or larger (Tablets/Desktops). */
+.hobby-category h3 {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/*Each track holds 5 items. On mobile each track will scroll horizontally*/
+.hobby-track {
+    display: flex;
+    gap: 1rem;
+    /*enables horizontal scrolling*/
+    overflow-x:auto;
+    /*Adds space at the bottom so the scroll bar won't cover up any text*/
+    padding-bottom: 1rem;
+}
+
+/*The card which actually holds the image and text*/
+.hobby-card-visual {
+    /*On mobile, each card is forced to be exactly 130px wide so that they don't get squished*/
+    flex: 0 0 130px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/*This adds a hover effect to the hobby cards*/
+.hobby-card-visual:hover {
+    transform: translateY(-5ox);
+    border-color: var(--accent-color)
+}
+
+.hobby-card-visual img {
+    width: 100%;
+    /*Forces every image to be the exact same height, no matter its original shape*/
+    height: 180px; 
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hobby-card-visual span {
+    display: block;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    /*If a title is too long, this neatly cuts it off with an ellipsis(...) */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+
+
+/*--- Desktop Breakpoint (Media Query) --- */
+/*This helps responsiveness */
+/*The rules inside these brackets ONLY apply if the screen is 768px wide or larger (Tablets/Desktops). */
 @media (min-width: 768px) {
 
-    /* --- Desktop Projects Adjustments --- */
+    /*---Desktop Hobbies Adjustments----*/
+    .hobby-track {
+        /*Switches from horizontal scrolling to a simple 5-column grid */
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        /*disables the mobile scroll bar*/
+        overflow-x: visible;
+        padding-bottom: 0;
+    }
+
+    .hobby-card-visual {
+        /*lets the grid decide the width instead of the default, fixed mobile size*/
+        flex: auto;
+    }
+    /*--- Desktop Projects Adjustments --- */
     .projects-grid {
         /* Changes the grid from 1 column to 2 equal columns */
         grid-template-columns: repeat(2, 1fr);
     }
 
     .project-card {
-        /* On desktop, makes each card take up exactly half the width minus the gap*/
+        /*On desktop, makes each card take up exactly half the width minus the gap*/
         width: calc(50% - 1rem);
     }
 
     .top-bar {
-        /* Changes the stack from vertical to horizontal */
+        /*Changes the stack from vertical to horizontal*/
         flex-direction: row; 
-        /* Pushes the logo to the left, and the links to the right */
+        /*Pushes the logo to the left, and the links to the right*/
         justify-content: space-between;
-        /* Increases the padding since there is more screen real estate */
+        /*Increases the padding since there is more screen real estate*/
         padding: 1rem 2rem;
     }
     
     .logo {
-        margin-bottom: 0; /* Removes the bottom spacing needed on mobile */
+        margin-bottom: 0; /*Removes the bottom spacing needed on mobile*/
     }
     
     .hero h1 {
-        font-size: 2.5rem; /* Makes the main title larger on big screens */
+        font-size: 2.5rem; /*Makes the main title larger on big screens*/
     }
 
     /*-- Desktop hero adjustments --*/
     .hero-content {
-        /* switches from vertical stack to horizontal row */
+        /*switches from vertical stack to horizontal row*/
         flex-direction: row;
         text-align: left;
         justify-content: space-between;
     }
 
     .hero-image img {
-        /* Makes the circle slightly bigger on large screens */
+        /*Makes the circle slightly bigger on large screens*/
         width: 200px;
         height: 200px; 
     }
