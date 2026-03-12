@@ -25,9 +25,11 @@ DEVELOPMENT TIMELINE:
 3/10/26:
 1. Added my full hobbies section by putting my top 5 of games, music, and movies. I did this by either putting them each on a track system(mobile) or having a full 5 column layout for each interest (desktop) i used a card system similar to the project cards, but with much more emphasis on the image portion.
 
+3/11/26:
+1. Added footer containing my "Contact Me" section. It includes three buttons for different social network accounts (Email, Github, LinkedIn). It also contains a short blurb telling people that I'm currently looking for entry-level IT positions as well as a small copyright mark.
 
-seperate areas, make fonts more readable
+2. Added a sectionn unique to me: a section including resources that i frequently use in my personal life. I created 4 resource cards which themselves act as buttons, taking you to the resource when clicked. I also made it so that, when viewed on desktop, the resource cards will show up as a 2x2 grid.
 
-zoom out picture
+--------END OF TIMELINE - PROJECT FINISHED--------
 
-Add footer
+

@@ -404,6 +404,50 @@ summary::-webkit-details-marker {
     text-overflow: ellipsis; 
 }
 
+/*---Resources Section---*/
+.resources-grid {
+    display: grid;
+    /* Single column for mobile */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.resource-card {
+    display: block;
+    text-decoration: none;
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    /*Creates a subtle dark line on the left edge*/
+    border-left: 4px solid var(--border-color);
+    /*Sets up the smooth hover animation */
+    transition: border-left-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*The Hover Effect*/
+.resource-card:hover {
+    /* Lights up the left edge with the blue accent color */
+    border-left-color: var(--accent-color);
+    /* Slides the card 5 pixels to the right */
+    transform: translateX(5px);
+    /* Adds a soft shadow behind it */
+    box-shadow: -4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.resource-card h3 {
+    color: var(--text-main);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.resource-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    /*Removes the margin from the bottom of the paragraph to keep the card neat-looking */
+    margin-bottom: 0; 
+}
+
 /*---footer & contact section---*/
 .site-footer {
     background-color: var(--surface-color);
@@ -461,7 +505,7 @@ summary::-webkit-details-marker {
     color: var(--accent-color);
 }
 
-/* Secondary actions (GitHub, LinkedIn) get a subtle dark outline */
+/* Secondary actions (GitHub, LinkedIn) get a slightly darker outline */
 .secondary-btn {
     background-color: transparent;
     color: var(--text-main);
@@ -483,6 +527,12 @@ summary::-webkit-details-marker {
 /*This helps responsiveness */
 /*The rules inside these brackets ONLY apply if the screen is 768px wide or larger (Tablets/Desktops). */
 @media (min-width: 768px) {
+
+    /*---Desktop resources Adjustments---*/
+    .resources-grid {
+        /*Splits the single column into two equal columns */
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     /*---Desktop Hobbies Adjustments----*/
     .hobby-track {
