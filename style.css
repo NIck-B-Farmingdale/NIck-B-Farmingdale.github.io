@@ -1,11 +1,11 @@
 /*:root creates a global scope for variables. This works just like declaring variables in a programming script. */
 /*If I ever want to change a color later, I will only have to change it here, not on every single line. */
 :root {
-    --bg-color: #322222;         
+    --bg-color: #121212;         
     --surface-color: #1e1e1e;    
-    --text-main: #0f55fb;        
+    --text-main: #fdfdfd;        
     --text-muted: #c5bdbd;       
-    --accent-color: #f99717;     
+    --accent-color: #4da6ff;     
     --border-color: #333333;     
 }
 
@@ -343,7 +343,7 @@ summary::-webkit-details-marker {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/*Visual hobbies layout*/
+/*---Hobbies Section---*/
 .hobby-category {
     margin-bottom: 2.5rem;
 }
@@ -404,7 +404,80 @@ summary::-webkit-details-marker {
     text-overflow: ellipsis; 
 }
 
+/*---footer & contact section---*/
+.site-footer {
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+    /*Adds a lot of padding in all 4 directions*/
+    padding: 4rem 1rem 2rem;
+    text-align: center;
+    /*Pushes the footer below the main content*/
+    margin-top: 4rem;
+}
 
+.site-footer h2 {
+    /*Removes the bottom underline I applied to the other section headers*/
+    border-bottom: none; 
+    margin-bottom: 0.5rem;
+}
+
+.site-footer p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    /*Centers the paragraph block automatically*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+/*Button styles*/
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* The primary action (Email) will have the blue accent color */
+.primary-btn {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: 1px solid var(--accent-color);
+}
+
+/*applying the hover effect to the primary button*/
+.primary-btn:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+/* Secondary actions (GitHub, LinkedIn) get a subtle dark outline */
+.secondary-btn {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* The tiny copyright text at the bottom */
+.footer-bottom {
+    font-size: 0.85rem;
+    color: #666666; 
+}
 
 /*--- Desktop Breakpoint (Media Query) --- */
 /*This helps responsiveness */
