@@ -1,6 +1,8 @@
 # NIck-B-Farmingdale.github.io
 My personal portfolio web page.
 
+WIREFRAME DESIGN:
+![Wireframe](wireframe.jpg)
 
 DEVELOPMENT TIMELINE:
 3/7/26:
